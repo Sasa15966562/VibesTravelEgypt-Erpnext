@@ -1,0 +1,91 @@
+2024-08-29 12:55:08,237 DEBUG cd erpnext-project && python3 -m venv env
+2024-08-29 12:55:10,776 DEBUG cd erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade pip
+2024-08-29 12:55:13,535 DEBUG cd erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet wheel
+2024-08-29 12:55:14,929 LOG Getting frappe
+2024-08-29 12:55:14,929 DEBUG cd erpnext-project/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2024-08-29 12:55:21,681 LOG Installing frappe
+2024-08-29 12:55:21,682 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/frappe 
+2024-08-29 12:57:15,733 DEBUG cd /home/mustafa-nazier/erpnext-project/apps/frappe && yarn install --check-files
+2024-08-29 12:58:14,047 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 12:58:14,047 DEBUG cd erpnext-project && bench build
+2024-08-29 12:58:14,180 INFO /home/mustafa-nazier/erpnext_env/bin/bench build
+2024-08-29 12:58:31,763 LOG setting up backups
+2024-08-29 12:58:31,769 LOG backups were set up
+2024-08-29 12:58:31,769 INFO Bench erpnext-project initialized
+2024-08-29 13:00:58,451 INFO /home/mustafa-nazier/erpnext_env/bin/bench get-app erpnext https://github.com/frappe/erpnext
+2024-08-29 13:00:58,457 LOG Getting erpnext
+2024-08-29 13:00:58,457 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext  --depth 1 --origin upstream
+2024-08-29 13:01:05,365 LOG Installing erpnext
+2024-08-29 13:01:05,366 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/erpnext 
+2024-08-29 13:01:24,413 DEBUG cd /home/mustafa-nazier/erpnext-project/apps/erpnext && yarn install --check-files
+2024-08-29 13:01:25,309 DEBUG bench build --app erpnext
+2024-08-29 13:01:25,413 INFO /home/mustafa-nazier/erpnext_env/bin/bench build --app erpnext
+2024-08-29 13:01:29,717 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 16:52:28,761 INFO /home/mustafa-nazier/erpnext_env/bin/bench new-site testsite.local
+2024-08-29 16:53:06,873 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site mysite.local install-app erpnext
+2024-08-29 16:53:22,926 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local install-app erpnext
+2024-08-29 16:54:38,514 INFO /home/mustafa-nazier/erpnext_env/bin/bench get-app hrms
+2024-08-29 16:54:38,988 LOG Getting hrms
+2024-08-29 16:54:38,988 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2024-08-29 16:54:43,640 LOG Installing hrms
+2024-08-29 16:54:43,640 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/hrms 
+2024-08-29 16:54:45,272 DEBUG cd /home/mustafa-nazier/erpnext-project/apps/hrms && yarn install --check-files
+2024-08-29 16:56:35,948 DEBUG bench build --app hrms
+2024-08-29 16:56:36,055 INFO /home/mustafa-nazier/erpnext_env/bin/bench build --app hrms
+2024-08-29 16:56:57,827 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 16:57:09,098 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local install-app hrms
+2024-08-29 16:58:11,752 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-08-29 16:58:11,994 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-08-29 16:58:11,996 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-08-29 16:58:12,046 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-08-29 16:58:12,048 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-08-29 17:00:30,494 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-08-29 17:00:30,720 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-08-29 17:00:30,721 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-08-29 17:00:30,725 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-08-29 17:00:30,774 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-08-29 17:01:44,981 INFO /home/mustafa-nazier/erpnext_env/bin/bench config
+2024-08-29 17:02:04,539 INFO /home/mustafa-nazier/erpnext_env/bin/bench setup requirements
+2024-08-29 17:02:04,543 DEBUG /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade pip
+2024-08-29 17:02:05,447 LOG Installing frappe
+2024-08-29 17:02:05,447 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/frappe 
+2024-08-29 17:02:07,751 DEBUG cd /home/mustafa-nazier/erpnext-project/apps/frappe && yarn install --check-files
+2024-08-29 17:02:09,145 LOG Installing erpnext
+2024-08-29 17:02:09,145 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/erpnext 
+2024-08-29 17:02:10,852 DEBUG cd /home/mustafa-nazier/erpnext-project/apps/erpnext && yarn install --check-files
+2024-08-29 17:02:11,207 LOG Installing hrms
+2024-08-29 17:02:11,207 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/hrms 
+2024-08-29 17:02:12,886 DEBUG cd /home/mustafa-nazier/erpnext-project/apps/hrms && yarn install --check-files
+2024-08-29 17:02:27,895 INFO /home/mustafa-nazier/erpnext_env/bin/bench build
+2024-08-29 17:03:06,452 INFO /home/mustafa-nazier/erpnext_env/bin/bench restart
+2024-08-29 17:03:06,457 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 17:03:18,184 INFO /home/mustafa-nazier/erpnext_env/bin/bench setup nginx
+2024-08-29 17:03:30,038 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-08-29 17:03:30,292 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-08-29 17:03:30,293 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-08-29 17:03:30,333 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-08-29 17:03:30,343 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-08-29 17:03:59,039 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local serve
+2024-08-29 17:06:37,525 INFO /home/mustafa-nazier/erpnext_env/bin/bench build
+2024-08-29 17:07:33,219 INFO /home/mustafa-nazier/erpnext_env/bin/bench restart
+2024-08-29 17:07:33,224 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-08-29 17:07:56,568 INFO /home/mustafa-nazier/erpnext_env/bin/bench doctor
+2024-08-29 17:08:26,491 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local show-config
+2024-08-29 17:08:43,395 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local migrate
+2024-08-29 17:09:18,715 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local clear-cache
+2024-09-01 13:21:31,105 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-01 13:21:31,416 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-01 13:21:31,442 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-01 13:21:31,476 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-01 13:21:31,479 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-01 13:25:44,850 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-01 13:25:45,142 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-01 13:25:45,160 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-01 13:25:45,212 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-01 13:25:45,227 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-01 13:26:36,881 INFO /home/mustafa-nazier/erpnext_env/bin/bench use testsite.local
+2024-09-01 13:26:41,609 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-01 13:26:41,884 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-01 13:26:41,904 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-01 13:26:41,947 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-01 13:26:41,965 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker

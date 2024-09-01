@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: barcodenumber
+Version: 0.5.0
+Summary: Python module to validate Product codes (EAN, EAN13, ISBN,...)
+Home-page: http://www.zikzakmedia.com/
+Author: Zikzakmedia SL
+Author-email: zikzak@zikzakmedia.com
+License: GPL-3
+Download-URL: https://bitbucket.org/zikzakmedia/python-barcodenumber
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: python-stdnum
+
+barcodenumber
+=============
+
+Python module to validate product codes.
+
+Codes
+-----
+
+* code39
+* ean (ean12)
+* ean8
+* ean13
+* gtin (ean13)
+* gtin14
+* gs1_datamatrix
+* isbn
+* isbn10
+* isbn13
+* upc (ean12)
+
+
+
+Nutshell
+--------
+
+Here a simple example to validate product codes::
+
+    >>> import barcodenumber
+    >>> barcodenumber.check_code('ean13','9788478290222')
+    True
+    >>> barcodenumber.barcodes()
+    ['CODE39', 'EAN', 'EAN13', 'EAN8', 'GS1', 'GTIN', 'ISBN', 'ISBN10', 'ISBN13',
+    'ISSN', 'JAN', 'PZN', 'UPC', 'UPCA']
+
+
