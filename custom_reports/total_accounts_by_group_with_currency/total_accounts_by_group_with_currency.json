@@ -1,0 +1,20 @@
+{
+  "filters": [
+    {
+      "fieldname": "date_range",
+      "label": "Date Range",
+      "fieldtype": "Date Range"
+    },
+    {
+      "fieldname": "account_group",
+      "label": "Account Group",
+      "fieldtype": "Link",
+      "options": "Account"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Data"
+    }
+  ]
+}
