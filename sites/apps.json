@@ -27,5 +27,15 @@
         "required": [],
         "idx": 3,
         "version": "16.0.0-dev"
+    },
+    "test_theme": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "299089cd3f2a190e2357d5270cdcb70b0fbfbfff",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "0.0.1"
     }
 }

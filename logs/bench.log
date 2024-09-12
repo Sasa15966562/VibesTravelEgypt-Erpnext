@@ -89,3 +89,39 @@
 2024-09-01 13:26:41,904 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
 2024-09-01 13:26:41,947 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
 2024-09-01 13:26:41,965 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-01 14:05:56,191 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-01 14:05:56,476 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-01 14:05:56,487 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-01 14:05:56,488 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-01 14:05:56,552 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-01 14:15:04,303 INFO /home/mustafa-nazier/erpnext_env/bin/bench migrate
+2024-09-01 14:15:10,129 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-01 14:15:10,429 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-01 14:15:10,454 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-01 14:15:10,482 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-01 14:15:10,482 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-01 14:15:54,567 INFO /home/mustafa-nazier/erpnext_env/bin/bench migrate
+2024-09-01 14:16:44,668 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-03 14:04:37,410 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-03 14:04:37,711 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-03 14:04:37,731 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-03 14:04:37,731 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-03 14:04:37,775 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-03 15:15:44,266 INFO /home/mustafa-nazier/erpnext_env/bin/bench new-app test_theme
+2024-09-03 15:15:44,273 LOG creating new app test_theme
+2024-09-03 15:16:30,613 LOG Installing test_theme
+2024-09-03 15:16:30,614 DEBUG cd /home/mustafa-nazier/erpnext-project && /home/mustafa-nazier/erpnext-project/env/bin/python -m pip install --quiet --upgrade -e /home/mustafa-nazier/erpnext-project/apps/test_theme 
+2024-09-03 15:16:32,823 DEBUG bench build --app test_theme
+2024-09-03 15:16:32,977 INFO /home/mustafa-nazier/erpnext_env/bin/bench build --app test_theme
+2024-09-03 15:16:35,378 WARNING restart failed: Couldn't find supervisorctl in PATH
+2024-09-03 15:16:35,727 INFO A newer version of bench is available: 5.22.8 → 5.22.9
+2024-09-03 15:17:00,186 INFO /home/mustafa-nazier/erpnext_env/bin/bench --site testsite.local install-app test_theme
+2024-09-03 15:21:46,159 INFO /home/mustafa-nazier/erpnext_env/bin/bench build
+2024-09-03 16:07:07,784 INFO /home/mustafa-nazier/erpnext_env/bin/bench start
+2024-09-03 16:07:08,082 INFO /home/mustafa-nazier/erpnext_env/bin/bench serve --port 8000
+2024-09-03 16:07:08,089 INFO /home/mustafa-nazier/erpnext_env/bin/bench schedule
+2024-09-03 16:07:08,148 INFO /home/mustafa-nazier/erpnext_env/bin/bench worker
+2024-09-03 16:07:08,152 INFO /home/mustafa-nazier/erpnext_env/bin/bench watch
+2024-09-03 18:00:02,053 INFO /home/mustafa-nazier/erpnext_env/bin/bench --verbose --site all backup
+2024-09-05 18:00:02,031 INFO /home/mustafa-nazier/erpnext_env/bin/bench --verbose --site all backup
+2024-09-08 18:00:01,224 INFO /home/mustafa-nazier/erpnext_env/bin/bench --verbose --site all backup

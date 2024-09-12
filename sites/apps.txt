@@ -1,3 +1,4 @@
 frappe
+test_theme
 erpnext
 hrms

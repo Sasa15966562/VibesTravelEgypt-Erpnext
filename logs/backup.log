@@ -1,0 +1,18 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_4f9e6e4a86f2d138 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _4f9e6e4a86f2d138 | /usr/bin/gzip >> ./testsite.local/private/backups/20240903_180002-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2024-09-03 18:00:03.729265
+Config  : /home/mustafa-nazier/erpnext-project/sites/testsite.local/private/backups/20240903_180002-testsite_local-site_config_backup.json 191.0B
+Database: /home/mustafa-nazier/erpnext-project/sites/testsite.local/private/backups/20240903_180002-testsite_local-database.sql.gz 920.6KiB
+Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_4f9e6e4a86f2d138 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _4f9e6e4a86f2d138 | /usr/bin/gzip >> ./testsite.local/private/backups/20240905_180002-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2024-09-05 18:00:04.118789
+Config  : /home/mustafa-nazier/erpnext-project/sites/testsite.local/private/backups/20240905_180002-testsite_local-site_config_backup.json 191.0B
+Database: /home/mustafa-nazier/erpnext-project/sites/testsite.local/private/backups/20240905_180002-testsite_local-database.sql.gz 920.6KiB
+Backup for Site testsite.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_4f9e6e4a86f2d138 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _4f9e6e4a86f2d138 | /usr/bin/gzip >> ./testsite.local/private/backups/20240908_180001-testsite_local-database.sql.gz
+
+Backup Summary for testsite.local at 2024-09-08 18:00:03.338874
+Config  : /home/mustafa-nazier/erpnext-project/sites/testsite.local/private/backups/20240908_180001-testsite_local-site_config_backup.json 191.0B
+Database: /home/mustafa-nazier/erpnext-project/sites/testsite.local/private/backups/20240908_180001-testsite_local-database.sql.gz 920.6KiB
+Backup for Site testsite.local has been successfully completed

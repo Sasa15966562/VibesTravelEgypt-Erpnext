@@ -1,0 +1,80 @@
+{
+    "add_total_row": 0,
+    "columns": [
+        {
+            "fieldname": "party",
+            "label": "Party",
+            "fieldtype": "Link",
+            "options": "Party",
+            "width": 200
+        },
+        {
+            "fieldname": "party_type",
+            "label": "Party Type",
+            "fieldtype": "Data",
+            "width": 150
+        },
+        {
+            "fieldname": "currency",
+            "label": "Currency",
+            "fieldtype": "Link",
+            "options": "Currency",
+            "width": 100
+        },
+        {
+            "fieldname": "debit",
+            "label": "Debit",
+            "fieldtype": "Currency",
+            "options": "currency",
+            "width": 150
+        },
+        {
+            "fieldname": "credit",
+            "label": "Credit",
+            "fieldtype": "Currency",
+            "options": "currency",
+            "width": 150
+        },
+        {
+            "fieldname": "balance",
+            "label": "Balance",
+            "fieldtype": "Currency",
+            "options": "currency",
+            "width": 150
+        },
+        {
+            "fieldname": "posting_date",
+            "label": "Posting Date",
+            "fieldtype": "Date",
+            "width": 120
+        }
+    ],
+    "filters": [
+        {
+            "fieldname": "from_date",
+            "label": "From Date",
+            "fieldtype": "Date",
+            "default": "2024-01-01"
+        },
+        {
+            "fieldname": "to_date",
+            "label": "To Date",
+            "fieldtype": "Date",
+            "default": "2024-12-31"
+        }
+    ],
+    "creation": "2024-09-12 12:00:00.000000",
+    "disable_prepared_report": 0,
+    "is_standard": "No",
+    "module": "Accounts",
+    "report_name": "Customer and Supplier Transactions with Multi-Currency",
+    "report_type": "Script Report",
+    "roles": [
+        {
+            "role": "Accounts Manager"
+        },
+        {
+            "role": "Auditor"
+        }
+    ]
+}

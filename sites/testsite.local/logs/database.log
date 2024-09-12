@@ -1943,3 +1943,5 @@ ALTER TABLE `tabDepartment` MODIFY `rgt` int NOT NULL DEFAULT 0, MODIFY `is_grou
 ALTER TABLE `tabEmployee` ADD COLUMN `employment_type` varchar(140), ADD COLUMN `grade` varchar(140), ADD COLUMN `job_applicant` varchar(140), ADD COLUMN `default_shift` varchar(140), ADD COLUMN `expense_approver` varchar(140), ADD COLUMN `leave_approver` varchar(140), ADD COLUMN `shift_request_approver` varchar(140), ADD COLUMN `payroll_cost_center` varchar(140), ADD COLUMN `health_insurance_provider` varchar(140), ADD COLUMN `health_insurance_no` varchar(140)
 2024-08-29 16:57:24,083 WARNING database DDL Query made to DB:
 ALTER TABLE `tabEmployee` MODIFY `notice_number_of_days` int NOT NULL DEFAULT 0, MODIFY `unsubscribed` tinyint NOT NULL DEFAULT 0, MODIFY `lft` int NOT NULL DEFAULT 0, MODIFY `ctc` decimal(21,9) NOT NULL DEFAULT 0.0, MODIFY `create_user_permission` tinyint NOT NULL DEFAULT 1, MODIFY `rgt` int NOT NULL DEFAULT 0
+2024-09-01 14:15:55,230 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
