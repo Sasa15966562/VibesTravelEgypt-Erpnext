@@ -66,7 +66,6 @@ def get_data(filters):
         "GL Entry",
         filters={
             "party_type": ["in", ["Customer", "Supplier"]],
-            "posting_date": ["between", [filters.get("from_date"), filters.get("to_date")]]
         },
         fields=["party", "party_type", "account_currency", "debit", "credit", "posting_date"]
     )
