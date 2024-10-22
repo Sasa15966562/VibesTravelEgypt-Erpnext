@@ -1,0 +1,109 @@
+1. First enable Developer Mode:
+
+- Go to Settings > System Settings
+- Scroll down and check "Developer Mode"
+- Save
+
+
+2. Create the DocType:
+
+- Go to Settings > Customize > DocType > New
+- Fill in these basic details:
+
+- Name: "Utility Bill Reminder"
+- Module: "Accounts"
+- Check "Custom"
+
+3. Add these fields in the "Fields" table:
+
+- Click "Add Row" and add each field:
+
+a) First field:
+
+- Label: "Bill Type"
+- Fieldname: "bill_type"
+- Fieldtype: "Select"
+- Options: Type this in the Options field:
+
+Electricity
+Internet
+Landline
+Water
+Other
+Check "Mandatory"
+
+b) Second field:
+
+Label: "Due Date"
+Fieldname: "due_date"
+Fieldtype: "Date"
+Check "Mandatory"
+
+c) Third field:
+
+Label: "Reminder Days Before"
+Fieldname: "reminder_days_before"
+Fieldtype: "Int"
+Default Value: "5"
+Check "Mandatory"
+
+d) Fourth field:
+
+Label: "Approximate Amount"
+Fieldname: "approximate_amount"
+Fieldtype: "Currency"
+
+e) Fifth field:
+
+Label: "Reminder Email"
+Fieldname: "reminder_email"
+Fieldtype: "Data"
+Options: "Email"
+Check "Mandatory"
+
+f) Sixth field:
+
+Label: "Notify Users"
+Fieldname: "notify_users"
+Fieldtype: "Table MultiSelect"
+Options: "User"
+Check "Mandatory"
+
+g) Seventh field:
+
+Label: "Is Recurring"
+Fieldname: "is_recurring"
+Fieldtype: "Check"
+Default: "1"
+
+h) Eighth field:
+
+Label: "Frequency"
+Fieldname: "frequency"
+Fieldtype: "Select"
+Options:
+
+Monthly
+Quarterly
+Yearly
+
+
+Depends On: "eval:doc.is_recurring==1"
+Check "Mandatory"
+
+
+4. Create Server Script:
+
+Go to Settings > Server Script > New
+Name: "Bill Payment Reminder Handler"
+Document Type: "Utility Bill Reminder"
+Event: "After Insert"
+Script Type: "DocType Event"
+Disabled: Unchecked
+Reference Document Type: "Utility Bill Reminder"
+
+Then paste the script called "utility Bill Reminder" in its place then save.
+
+Go to your search bar (Ctrl/Cmd + G)
+Type "Utility Bill Reminder"
+Create a new reminder to test the system
