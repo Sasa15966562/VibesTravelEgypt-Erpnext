@@ -1,6 +1,5 @@
-import frappe
-from frappe.utils import add_days, add_months
-from frappe.desk.doctype.notification_log.notification_log import enqueue_create_notification
+frappe.utils.add_days = frappe.utils.data.add_days
+frappe.utils.add_months = frappe.utils.data.add_months
 
 def generate_reminder_event(doc, method):
     # Create calendar event
