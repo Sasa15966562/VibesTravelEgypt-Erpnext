@@ -1,0 +1,51 @@
+INSTALLING TOURISM FILE COST SHEET REPORT IN ERPNEXT (FRAPPE CLOUD)
+
+1. ACCESS CUSTOM REPORT CREATION:
+   - Click on Menu (☰)
+   - Go to Settings
+   - Click on Custom Reports
+   - Click New
+
+2. FILL BASIC REPORT DETAILS:
+   - Report Name: Tourism File Cost Sheet
+   - Module: Selling
+   - Reference DocType: Sales Order
+   - Report Type: Script Report
+   - Is Standard: No (uncheck)
+   - Disabled: No (uncheck)
+
+3. ADD THE REPORT SCRIPT:
+   - Click on "Report Script" tab
+   - Click inside the code editor box
+   - Paste the entire Python code
+   - Ensure indentation remains intact (use spaces, not tabs)
+
+4. SAVE THE REPORT:
+   - Click the blue "Save" button (top right)
+   - Wait for success message
+
+5. ACCESS THE REPORT:
+   - Click Menu (☰)
+   - Go to Selling
+   - Click Reports
+   - Find "Tourism File Cost Sheet"
+
+6. USING THE REPORT:
+   - Select a File number from dropdown
+   - Click "Run"
+   - Use top buttons for:
+     * Export to Excel
+     * Export to PDF
+     * Print
+
+IMPORTANT NOTES:
+1. Don't modify code without Python knowledge
+2. Ensure you have custom report creation permissions
+3. Files must be properly linked to Leads
+4. Save work frequently
+
+REQUIREMENTS:
+- Sales Orders must be linked to Opportunities
+- Opportunities must be linked to Leads
+- Leads must have Lead Departments set
+- Items must have proper currency settings
