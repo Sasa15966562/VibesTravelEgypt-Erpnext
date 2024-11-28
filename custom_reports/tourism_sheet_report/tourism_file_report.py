@@ -1,10 +1,13 @@
-# tourism_file_report.py
 from __future__ import unicode_literals
 import frappe
 from frappe import _
 
 def execute(filters=None):
-    if not filters.get("sales_order"):
+    # Handle both dictionary-style filters and object-style filters
+    sales_order = filters.get("sales_order") if isinstance(filters, dict) else getattr(filters, "sales_order", None)
+    item_code = filters.get("item_code") if isinstance(filters, dict) else getattr(filters, "item_code", None)
+    
+    if not sales_order:
         frappe.throw(_("Please select a Tourism File"))
         
     columns = get_columns()
@@ -47,8 +50,12 @@ def get_columns():
     ]
 
 def get_data(filters):
+    # Handle both dictionary-style filters and object-style filters
+    sales_order = filters.get("sales_order") if isinstance(filters, dict) else getattr(filters, "sales_order", None)
+    item_code = filters.get("item_code") if isinstance(filters, dict) else getattr(filters, "item_code", None)
+    
     data = []
-    file_doc = frappe.get_doc("Sales Order", filters.sales_order)
+    file_doc = frappe.get_doc("Sales Order", sales_order)
     
     # Get Lead Department from the linked Lead
     lead_department = None
@@ -73,7 +80,10 @@ def get_data(filters):
         department_total_egp = 0
         department_total_usd = 0
         
-        for item in file_doc.items:
+        # Filter items based on item_code if specified
+        items = [item for item in file_doc.items if not item_code or item.item_code == item_code]
+        
+        for item in items:
             # Handle multicurrency items
             if item.currency == "USD":
                 usd_amount = item.amount
@@ -117,9 +127,14 @@ def get_data(filters):
         "is_total_row": 1
     })
     
-    # Get Revenue from file
-    revenue_egp = file_doc.grand_total
-    revenue_usd = revenue_egp / file_doc.conversion_rate if file_doc.conversion_rate else 0
+    # Get Revenue from file (adjusted for item filter)
+    if item_code:
+        revenue_items = [item for item in file_doc.items if item.item_code == item_code]
+        revenue_egp = sum(item.amount for item in revenue_items)
+        revenue_usd = revenue_egp / file_doc.conversion_rate if file_doc.conversion_rate else 0
+    else:
+        revenue_egp = file_doc.grand_total
+        revenue_usd = revenue_egp / file_doc.conversion_rate if file_doc.conversion_rate else 0
     
     data.append({
         "expense_category": "Revenue",
@@ -159,5 +174,20 @@ def get_filter_data():
             "fieldtype": "Link",
             "options": "Sales Order",
             "reqd": 1
+        },
+        {
+            "fieldname": "item_code",
+            "label": _("Sales Order Item"),
+            "fieldtype": "Link",
+            "options": "Item",
+            "get_query": lambda: {
+                "query": "frappe.client.get_list",
+                "filters": {
+                    "parent": "sales_order",
+                    "parenttype": "Sales Order",
+                    "doctype": "Sales Order Item",
+                    "fields": ["item_code"]
+                }
+            }
         }
     ]
