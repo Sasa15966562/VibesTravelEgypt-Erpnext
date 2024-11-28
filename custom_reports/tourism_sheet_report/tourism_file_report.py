@@ -151,7 +151,7 @@ def get_data(filters):
     
     return data
 
-def get_filters():
+def get_filter_data():
     return [
         {
             "fieldname": "sales_order",
